@@ -1,0 +1,13 @@
+Show number of threads for process firefox or google-chrome 
+• ps with NLWP (number of lightweight processes) option
+minh@minh-HP-Laptop-15-da0xxx:~/git_workspace/os2020$ ps -e | grep firefox | awk '{print $1}'
+1976
+minh@minh-HP-Laptop-15-da0xxx:~/git_workspace/os2020$ ps -o nlwp 1976
+NLWP
+  72
+
+• Count number of subdirectory in
+minh@minh-HP-Laptop-15-da0xxx:~/git_workspace/os2020$ ls /proc/1976/task/ | wc -w
+72
+
+
